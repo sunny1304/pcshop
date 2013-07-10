@@ -1,0 +1,21 @@
+<h2> Welcome to asia computers </h2>
+<p>Contact us form</p>
+<div class="container">
+<%= form_tag nil,class: "login-form" do %>
+	<%= label_tag "Your email address" %>
+	<%= email_field_tag "email",nil %>
+	<br/>
+	<%= label_tag "Description" %>
+	<%= text_area_tag "description",nil, placeholder: "100 characters only" %>
+	<br/>
+	<%= label_tag "Are you happy with our service ?" %>
+	<%= check_box_tag "feedback",nil,nil, class: "checkbox" %>
+	<br/>
+	<%= submit_tag "Submit", class: "btn btn-search" %>
+<% end %>
+</div>	
+
+<%= link_to "categories",categories_path %>
+<%= link_to "sub_categories",sub_categories_path %>
+<%= link_to "brands",brands_path %>
+<%= link_to "products",products_path %>

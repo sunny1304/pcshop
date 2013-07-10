@@ -1,0 +1,49 @@
+<%= form_for(@product) do |f| %>
+  <% if @product.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@product.errors.count, "error") %> prohibited this product from being saved:</h2>
+
+      <ul>
+      <% @product.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :detail %><br />
+    <%= f.text_area :detail, rows: 5, cols: 25 %>
+  </div>
+  <div class="field">
+    <%= f.label :price %><br />
+    <%= f.text_field :price %>
+  </div>
+  <div class="field">
+    <%= f.label :model %><br />
+    <%= f.text_field :model %>
+  </div>
+  <div class="field">
+    <%= f.label "Product Id" %><br />
+    <%= f.text_field :product_id %>
+  </div>
+  <div class="field">
+    <%= f.label :category_id %><br />
+    <%= f.select :category_id,options_for_select(Category.all.collect{|category| [category.name,category.id]}) %>
+  </div>
+  <div class="field">
+    <%= f.label :sub_category_id %><br />
+    <%= f.select :sub_category_id, options_for_select(SubCategory.all.collect{|sub_category| [sub_category.name, sub_category.id]}) %>
+  </div>
+  <div class="field">
+    <%= f.label :brand_id %><br />
+    <%= f.select :brand_id, options_for_select(Brand.all.collect{|brand| [brand.name,brand.id]}) %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
