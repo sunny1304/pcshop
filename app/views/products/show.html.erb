@@ -46,7 +46,8 @@
   <b>Picture:</b><br/>
   <%= image_tag @product.product_pic.url, alt: @product.name %>
 <% else %>
-  <p> No picture uploaded yet</p>  
+  <p> No picture uploaded yet</p> 
+<% end %>   
 
 <br/>
 <!-- <%= check_box_tag "compare",1,false %> -->
