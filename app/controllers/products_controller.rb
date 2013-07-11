@@ -14,6 +14,10 @@ class ProductsController < ApplicationController
   # GET /products/1.json
   def show
     @product = Product.find(params[:id])
+    @product_category = Category.category_name(@product.category_id).first.name
+    @product_sub_category = SubCategory.sub_category_name(@product.sub_category_id).first.name
+    @product_brand = Brand.brand_name(@product.brand_id).first.name
+    logger.debug "...................#{session[:name]}"
 
     respond_to do |format|
       format.html # show.html.erb

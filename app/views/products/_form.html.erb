@@ -43,6 +43,10 @@
     <%= f.label :brand_id %><br />
     <%= f.select :brand_id, options_for_select(Brand.all.collect{|brand| [brand.name,brand.id]}) %>
   </div>
+  <div class="field">
+    <%= f.label "Upload a Picture" %>
+    <%= f.file_field :product_pic %>
+  </div>  
   <div class="actions">
     <%= f.submit %>
   </div>

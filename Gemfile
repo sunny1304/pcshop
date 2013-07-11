@@ -41,6 +41,7 @@ gem 'jquery-rails'
 gem 'kaminari', '~> 0.14.1'
 gem 'flatui-rails', '~> 0.0.4'
 gem 'friendly_id', '~> 4.0.9'
+gem 'carrierwave', '~> 0.8.0'
 
 group :test, :production do
 	gem 'thin'
