@@ -7,7 +7,7 @@ class Category < ActiveRecord::Base
   attr_accessible :name
   validates :name, uniqueness: true
 
-  has_many :products, :dependent :destroy
+  has_many :products, dependent: :destroy
   has_many :sub_categories, dependent: :destroy
 
   scope :category_name ,lambda{|id| where("id= ?", id)}
