@@ -7,8 +7,20 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+<div>
+	<%= render partial: "shared/header" %>
+	<%= render partial: "shared/main_menu" %>
+	<div class="container-fluid">
+		<div class="row-fluid">
+			<div class="span2">
+				<%= render partial: "shared/sidebar" %>
+			</div>
+			<div class="span10">
+				<%= yield %>
+			</div>
+		</div>
+	</div>
+	<%= render partial: "shared/footer" %>
+</div>
 </body>
 </html>

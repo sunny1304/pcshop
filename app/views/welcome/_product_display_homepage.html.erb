@@ -1,0 +1,29 @@
+<div class="span10">
+	<table>
+		<tr>
+    		<th>Name</th>
+    		<th>Detail</th>
+    		<th>Price</th>
+    		<th>Category</th>
+    		<th>Sub category</th>
+    		<th>Brand</th>
+    		<th></th>
+    		<th></th>
+    		<th></th>
+  		</tr>
+
+	<% @products.each do |product| %>
+  		<tr>
+    		<td><%= product.name %></td>
+    		<td><%= product.detail %></td>
+    		<td><%= product.price %></td>
+    		<td><%= product.category_id %></td>
+    		<td><%= product.sub_category_id %></td>
+    		<td><%= product.brand_id %></td>
+    		<td><%= link_to 'Show', product %></td>
+
+  		</tr>
+	<% end %>
+	</table>
+	
+</div>

@@ -11,6 +11,11 @@ Pcshop::Application.routes.draw do
 
   resources :categories
 
+  resources :welcome do
+    collection do
+      get 'product_display_homepage'
+    end
+  end
 
   # get "welcome/index"
 

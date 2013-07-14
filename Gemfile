@@ -23,6 +23,7 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem 'pjax_rails'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
@@ -39,9 +40,10 @@ gem 'jquery-rails'
 # To use debugger
 # gem 'debugger'
 gem 'kaminari', '~> 0.14.1'
-gem 'flatui-rails', '~> 0.0.4'
+# gem 'flatui-rails', '~> 0.0.4'
 gem 'friendly_id', '~> 4.0.9'
 gem 'carrierwave', '~> 0.8.0'
+gem 'bootstrap-sass', '~> 2.3.2.0'
 
 group :test, :production do
 	gem 'thin'

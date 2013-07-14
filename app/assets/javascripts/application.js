@@ -10,7 +10,8 @@
 // WARNING: THE FIRST BLANK LINE MARKS THE END OF WHAT'S TO BE PROCESSED, ANY BLANK LINE SHOULD
 // GO AFTER THE REQUIRES BELOW.
 //
+// require flat-ui
 //= require jquery
 //= require jquery_ujs
-//= require flat-ui
-//= require_tree .
+//= require bootstrap
+//= require pjax
