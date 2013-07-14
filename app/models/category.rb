@@ -8,6 +8,7 @@ class Category < ActiveRecord::Base
   validates :name, :uniqueness => true
 
   has_many :products
+  has_many :sub_categories
 
   scope :category_name ,lambda{|id| where("id= ?", id)}
 end
