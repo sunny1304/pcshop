@@ -45,6 +45,8 @@ gem 'friendly_id', '~> 4.0.9'
 gem 'carrierwave', '~> 0.8.0'
 gem 'bootstrap-sass', '~> 2.3.2.0'
 
+# gem 'backbone-on-rails'
+
 group :test, :production do
 	gem 'thin'
 end
