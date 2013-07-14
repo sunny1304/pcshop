@@ -1,7 +1,7 @@
 <div class="btn-group">
     <% if Category.all.present? %>
     	<% Category.all.each do |category| %>
-            <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+            <a class="btn dropdown-toggle" data-toggle="dropdown" href="javascript:void(0)">
         		<%= category.name %>
         		<span class="caret"></span>
         	</a>
