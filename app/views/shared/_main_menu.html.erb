@@ -1,17 +1,19 @@
 <div class="btn-group">
-	<% Category.all.each do |category| %>
-    	<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-    		<%= category.name %>
-    		<span class="caret"></span>
-    	</a>
-    	<% if category.sub_categories.present? %>
-    		<ul class="dropdown-menu" style="display:block">
-    			<% category.sub_categories.each do |sub_category| %>
-    				<li>
-    					<%= link_to sub_category.name, controller: 'welcome',action: 'product_display_homepage', id: sub_category.id, remote: true %>
-    				</li>
-    			<% end  %>
-    		</ul>
-    	<% end %>		
-    <% end %>	
+    <% if Category.all.present? %>
+    	<% Category.all.each do |category| %>
+            <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+        		<%= category.name %>
+        		<span class="caret"></span>
+        	</a>
+        	<% if category.sub_categories.present? %>
+        		<ul class="dropdown-menu" style="display:block">
+        			<% category.sub_categories.each do |sub_category| %>
+        				<li>
+        					<%= link_to sub_category.name, controller: 'welcome',action: 'product_display_homepage', id: sub_category.id, remote: true %>
+        				</li>
+        			<% end  %>
+        		</ul>
+        	<% end %>		
+        <% end %>
+    <% end %>    	
 </div>

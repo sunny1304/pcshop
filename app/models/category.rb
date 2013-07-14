@@ -5,10 +5,10 @@ class Category < ActiveRecord::Base
   # friendly_id :name
 
   attr_accessible :name
-  validates :name, :uniqueness => true
+  validates :name, uniqueness: true
 
-  has_many :products
-  has_many :sub_categories
+  has_many :products, :dependent :destroy
+  has_many :sub_categories, dependent: :destroy
 
   scope :category_name ,lambda{|id| where("id= ?", id)}
 end
