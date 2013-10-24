@@ -1,21 +1,23 @@
 Pcshop::Application.routes.draw do
 
-  resources :products
+  # resources :products
 
 
-  resources :brands
+  # resources :brands
 
 
-  resources :sub_categories
+  # resources :sub_categories
 
 
-  resources :categories
+  # resources :categories
 
-  resources :welcome do
-    collection do
-      get 'product_display_homepage'
-    end
-  end
+  # resources :welcome do
+  #   collection do
+  #     get 'product_display_homepage'
+  #   end
+  # end
+
+  resources :students
 
   # get "welcome/index"
 
@@ -76,3 +78,5 @@ Pcshop::Application.routes.draw do
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id))(.:format)1'
 end
+
+#dummyline
