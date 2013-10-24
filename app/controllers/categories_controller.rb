@@ -3,6 +3,7 @@ class CategoriesController < ApplicationController
   # GET /categories.json
   def index
     @categories = Category.all
+    @myvar = Category.my_test_method
 
     respond_to do |format|
       format.html # index.html.erb
@@ -45,6 +46,8 @@ class CategoriesController < ApplicationController
 
     respond_to do |format|
       if @category.save
+        logger.debug "=========#{request.path_parameters}"
+        logger.debug "=========#{request.request_parameters}"
         format.html { redirect_to @category, notice: 'Category was successfully created.' }
         format.json { render json: @category, status: :created, location: @category }
       else
@@ -61,6 +64,7 @@ class CategoriesController < ApplicationController
 
     respond_to do |format|
       if @category.update_attributes(params[:category])
+        logger.debug "===============#{request.put?}"
         format.html { redirect_to @category, notice: 'Category was successfully updated.' }
         format.json { head :no_content }
       else
